@@ -15,4 +15,5 @@
 class Person < ActiveRecord::Base
   attr_accessible :email, :name, :password_digest, :role
   has_many :apartments
+  has_secure_password
 end

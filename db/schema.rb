@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121023230606) do
+ActiveRecord::Schema.define(:version => 20121023233607) do
 
   create_table "apartments", :force => true do |t|
     t.string   "name"
@@ -44,10 +44,11 @@ ActiveRecord::Schema.define(:version => 20121023230606) do
     t.string   "name"
     t.string   "role"
     t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
     t.integer  "apartment_id"
     t.string   "password_digest"
+    t.string   "password_confirmation"
   end
 
   create_table "people_apartments", :id => false, :force => true do |t|
