@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AptPortal</title>
+<%= stylesheet_link_tag "application", :media => "all" %> <%= javascript_include_tag "application" %> <%= csrf_meta_tags %>
+Apartment Portal
+
+     <div class="span12">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">Apartment Manager</a>
+                <ul class="nav">
+
+                  <%= create_navlink('People', people_path) %>
+                  <%= create_navlink('Apartment', apartments_path) %>
+                  <%= create_navlink('Issues', issues_path) %>
+                </ul>
+              </div>
+            </div>       
+        </div>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+
+
